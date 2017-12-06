@@ -42,7 +42,7 @@ client.on('guildMemberAdd', member => {
   channel.send(`Welcome to the server, ${member}`);
 });
 
-bot.user.setGame(Test)
+bot.user.setGame()
 //Test Features! ^^^
 
 // THIS  MUST  BE  THIS  WAY
