@@ -19,7 +19,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === '!pineapple') {
-    	message.channel.send('Pineapple is the best pizza!');
+    	message.channel.send('Pineapple pizza is the best pizza!');
   	}
 });
 
