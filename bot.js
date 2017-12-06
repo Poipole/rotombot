@@ -28,6 +28,8 @@ client.on('message', message => {
     	message.channel.send('lmao');
   	}
 });
+bot.user.setPresence({ status: 'online', game: { name: 'Testing' } });
+//Added Features ^
 client.on('guildMemberAdd', member => {
   // Send the message to a designated channel on a server:
   const channel = member.guild.channels.find('name', 'member-log');
