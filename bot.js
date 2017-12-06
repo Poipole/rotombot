@@ -41,6 +41,8 @@ client.on('guildMemberAdd', member => {
   // Send the message, mentioning the member
   channel.send(`Welcome to the server, ${member}`);
 });
+
+bot.user.setGame(Test)
 //Test Features! ^^^
 
 // THIS  MUST  BE  THIS  WAY
