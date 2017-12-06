@@ -65,6 +65,6 @@ client.on('guildMemberAdd', member => {
 });
 
 // Log our bot in
-client.login(token);
+client.login(387358602341515264);
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
