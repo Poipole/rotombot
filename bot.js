@@ -28,6 +28,11 @@ client.on('message', message => {
     	message.channel.send('lmao');
   	}
 });
+client.on('message', message => {
+    if (message.content === '!fusions') {
+    	message.channel.send('http://pokefusion.japeal.com/');
+  	}
+});
 bot.user.setPresence({ status: 'online', game: { name: 'Testing' } });
 //Added Features ^
 client.on('guildMemberAdd', member => {
