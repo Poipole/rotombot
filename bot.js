@@ -13,19 +13,19 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === 'ping') {
-    	message.reply('pong');
+    	message.channel.send('pong');
   	}
 });
 
 client.on('message', message => {
     if (message.content === '!snow') {
-    	message.reply('https://youtu.be/T8cLW0Lckhc');
+    	message.channel.send('https://youtu.be/T8cLW0Lckhc');
   	}
 });
 
 client.on('message', message => {
     if (message.content === 'ayy') {
-    	message.reply('lmao');
+    	message.channel.send('lmao');
   	}
 });
 //Test Features! ^^^
