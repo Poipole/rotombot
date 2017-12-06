@@ -43,15 +43,7 @@ client.on('guildMemberAdd', member => {
 });
 
 //Test Features! ^^^
-const Discord = require("discord.js");
-const client = new Discord.Client();
-
-
 const newUsers = [];
-
-client.on("ready", () => {
-  console.log("I am ready!");
-});
 
 client.on("message", (message) => {
   if (message.content.startsWith("ping")) {
@@ -75,7 +67,5 @@ client.on("guildMemberRemove", (member) => {
   const guild = member.guild;
   if (newUsers[guild.id].has(member.id)) newUsers.delete(member.id);
 });
-
-client.login("Mzg3MzU4NjAyMzQxNTE1MjY0.DQn-LQ.HwjqsDs5dU5inO4i6pR-og9XxtY");
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
