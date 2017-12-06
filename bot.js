@@ -18,8 +18,8 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    if (message.content === '!snow') {
-    	message.channel.send('https://youtu.be/T8cLW0Lckhc');
+    if (message.content === '!pineapple') {
+    	message.channel.send('Pineapple is the best pizza!');
   	}
 });
 
