@@ -41,6 +41,12 @@ client.on('message', message => {
   	}
 });
 
+client.on('message', message => {
+    if (message.content === '!soapy') {
+    	message.channel.send('https://cdn.discordapp.com/attachments/387711694270496772/388361762036121610/moretears.png');
+  	}
+});
+
 //Test Features! ^^^
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
