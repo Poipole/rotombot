@@ -53,6 +53,11 @@ client.on('message', message => {
   	}
 });
 
+client.on('message', message => {
+    if (message.content === '!thegays') {
+    	message.channel.send('http://j.gifs.com/OY0VpE.gif');
+  	}
+});
 //Test Features! ^^^
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
