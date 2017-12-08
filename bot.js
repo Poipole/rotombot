@@ -47,6 +47,12 @@ client.on('message', message => {
   	}
 });
 
+client.on('message', message => {
+    if (message.content === '!bestpokemon') {
+    	message.channel.send('Rotom is the best Pokémon!');
+  	}
+});
+
 //Test Features! ^^^
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
