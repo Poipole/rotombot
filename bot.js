@@ -61,8 +61,9 @@ client.on('message', message => {
   	}
 });
 //Test Features! ^^^
-client.on('ready', () => {
-        client.setPlayingGame('Call of Duty: Black Ops 10');
+
+client.on("guildMemberAdd", (member) => {
+  newUsers.set(member.id, member.user);
 });
 
 // THIS  MUST  BE  THIS  WAY
