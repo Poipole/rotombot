@@ -61,6 +61,9 @@ client.on('message', message => {
   	}
 });
 //Test Features! ^^^
+client.on('ready', () => {
+        client.setPlayingGame('Call of Duty: Black Ops 10');
+});
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
