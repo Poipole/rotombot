@@ -61,5 +61,9 @@ client.on('message', message => {
   	}
 });
 //Test Features! ^^^
+c.on('serverNewMember',(x,y)=>{
+    if(x === c.servers.get('id',"SERVERID"))
+        c.sendMessage(x.channels.get('name','general'),"Welcome to my Server "+y.mention()+"!")
+})
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
