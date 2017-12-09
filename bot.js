@@ -61,9 +61,16 @@ client.on('message', message => {
   	}
 });
 //Test Features! ^^^
-c.on('serverNewMember',(x,y)=>{
-    if(x === c.servers.get('id',"SERVERID"))
-        c.sendMessage(x.channels.get('name','general'),"Welcome to my Server "+y.mention()+"!")
-})
+var bot = new Discord.Client();
+
+bot.on("guildMemberAdd", member => {
+    let mem = member.guild;
+
+    if (mem.defaultChannel) {
+        mem.defaultChannel.sendMessage(member.user + " welcome to the server!"); 
+    } else {
+        // do something if the #general channel isn't available
+    }
+});
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
