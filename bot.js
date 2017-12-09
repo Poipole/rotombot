@@ -3,6 +3,8 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
     console.log('I am ready!');
+    //no regrets
+    client.user.setGame(`on ${client.guilds.size} servers`);
 });
 
 client.on('message', message => {
