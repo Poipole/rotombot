@@ -61,16 +61,14 @@ client.on('message', message => {
   	}
 });
 //Test Features! ^^^
-var bot = new Discord.Client();
-
-bot.on("guildMemberAdd", member => {
-    let mem = member.guild;
-
-    if (mem.defaultChannel) {
-        mem.defaultChannel.sendMessage(member.user + " welcome to the server!"); 
-    } else {
-        // do something if the #general channel isn't available
-    }
+bot.on('guildMemberAdd', member => {
+    member.guild.channels.get('387360187532443668').send('**' + member.user.username + '**, has joined the server!'); 
 });
+
+bot.on('guildMemberRemove', member => {
+    member.guild.channels.get('387360187532443668').send('**' + member.user.username + '**, has left the server');
+    //
+});
+
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
