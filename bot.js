@@ -60,6 +60,12 @@ client.on('message', message => {
     	message.channel.send('http://j.gifs.com/OY0VpE.gif');
   	}
 });
+
+client.on('message', message => {
+    if (message.content === '!fufu') {
+    	message.channel.send('https://i.imgur.com/RXMDIv1.gif');
+  	}
+});
 //Test Features! ^^^
 
 // THIS  MUST  BE  THIS  WAY
