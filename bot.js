@@ -66,6 +66,13 @@ client.on('message', message => {
     	message.channel.send('https://i.imgur.com/RXMDIv1.gif');
   	}
 });
+
+
+client.on('message', message => {
+    if (message.content === '!lootboxes') {
+    	message.channel.send('http://i0.kym-cdn.com/photos/images/facebook/001/222/718/bb5.png');
+  	}
+});
 //Test Features! ^^^
 
 // THIS  MUST  BE  THIS  WAY
