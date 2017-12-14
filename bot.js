@@ -69,8 +69,8 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-    if (message.content === '!lootboxes') {
-    	message.channel.send('http://i0.kym-cdn.com/photos/images/facebook/001/222/718/bb5.png');
+    if (message.content === '!disgusting') {
+    	message.channel.send('https://i.imgur.com/cOzptAe.png');
   	}
 });
 //Test Features! ^^^
