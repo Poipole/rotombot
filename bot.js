@@ -73,6 +73,12 @@ client.on('message', message => {
     	message.channel.send('https://i.imgur.com/cOzptAe.png');
   	}
 });
+
+client.on('message', message => {
+    if (message.content === '!gaypowerlevel') {
+    	message.channel.send('https://78.media.tumblr.com/0550f3c6a806b238fff1d87a5a9ae808/tumblr_inline_msaa8cAkb51qz4rgp.png');
+  	}
+});
 //Test Features! ^^^
 
 // THIS  MUST  BE  THIS  WAY
