@@ -1,5 +1,6 @@
-const Discord = require('discord.js');
+const Discord = require("discord.js");
 const client = new Discord.Client();
+const config = require("./config.json");
 
 client.on("ready", () => {
   // This event will run if the bot starts, and logs in, successfully.
@@ -81,4 +82,4 @@ client.on('message', message => {
   	}
 });
 // THIS  MUST  BE  THIS  WAY
-client.login(process.env.BOT_TOKEN);
+client.login(config.token);
