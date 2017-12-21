@@ -26,12 +26,6 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    if (message.content === 'ayy') {
-    	message.channel.send('lmao');
-  	}
-});
-
-client.on('message', message => {
     if (message.content === '!fusions') {
     	message.channel.send('http://pokefusion.japeal.com/');
   	}
@@ -80,7 +74,7 @@ client.on('message', message => {
 });
 //Test Features! ^^^
 client.on('message', message => {
-    if (message.content === '!help') {
+    if (message.content === '!commands') {
     	message.channel.send('- !rotom\n- !pineapple\n- !fusions\n- !soap\n- !soapy\n- !thegays\n- !fufu\n- !disgusting\n- !gaypowerlevel\n- !io');
   	}
 });
