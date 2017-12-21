@@ -50,12 +50,6 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    if (message.content === '!bestpokemon') {
-    	message.channel.send('Rotom is the best Pokémon!');
-  	}
-});
-
-client.on('message', message => {
     if (message.content === '!thegays') {
     	message.channel.send('http://j.gifs.com/OY0VpE.gif');
   	}
@@ -66,7 +60,6 @@ client.on('message', message => {
     	message.channel.send('https://i.imgur.com/RXMDIv1.gif');
   	}
 });
-
 
 client.on('message', message => {
     if (message.content === '!disgusting') {
@@ -86,6 +79,20 @@ client.on('message', message => {
   	}
 });
 //Test Features! ^^^
-
+client.on('message', message => {
+    if (message.content === '!io') {
+    	message.channel.send('!rotom
+- !pineapple
+- !fusions
+- !soap
+- !soapy
+- !thegays
+- !fufu
+- !disgusting
+- !gaypowerlevel
+- !io
+');
+  	}
+});
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
