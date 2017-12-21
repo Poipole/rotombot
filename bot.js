@@ -81,17 +81,7 @@ client.on('message', message => {
 //Test Features! ^^^
 client.on('message', message => {
     if (message.content === '!help') {
-    	message.channel.send('
-- !rotom
-- !pineapple
-- !fusions
-- !soap
-- !soapy
-- !thegays
-- !fufu
-- !disgusting
-- !gaypowerlevel
-- !io
+    	message.channel.send('- !rotom \n- !pineapple- !fusions- !soap- !soapy- !thegays- !fufu- !disgusting- !gaypowerlevel- !io
 ');
   	}
 });
