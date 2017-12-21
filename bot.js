@@ -80,8 +80,9 @@ client.on('message', message => {
 });
 //Test Features! ^^^
 client.on('message', message => {
-    if (message.content === '!io') {
-    	message.channel.send('!rotom
+    if (message.content === '!help') {
+    	message.channel.send('
+- !rotom
 - !pineapple
 - !fusions
 - !soap
