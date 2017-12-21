@@ -75,7 +75,7 @@ client.on('message', message => {
 //Test Features! ^^^
 client.on('message', message => {
     if (message.content === '!commands') {
-    	message.channel.send('- !rotom\n- !pineapple\n- !fusions\n- !soap\n- !soapy\n- !thegays\n- !fufu\n- !disgusting\n- !gaypowerlevel\n- !io');
+    	message.author.sendMessage('- !rotom\n- !pineapple\n- !fusions\n- !soap\n- !soapy\n- !thegays\n- !fufu\n- !disgusting\n- !gaypowerlevel\n- !io');
   	}
 });
 // THIS  MUST  BE  THIS  WAY
