@@ -2,8 +2,6 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require("./config.json");
 
-client.user.setPresence({ game: { name: '!commands', type: 0 } });
-
 client.on("ready", () => {
   // This event will run if the bot starts, and logs in, successfully.
   console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`); 
