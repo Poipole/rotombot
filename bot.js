@@ -9,6 +9,14 @@ console.log('I am ready!');
 });
 
 client.on('guildMemberAdd', member => {
+  member.guild.defaultChannel.send(`Welcome to the server, ${member}!`);
+  const channel = member.guild.channels.find('name', 'member-log');
+  if (!channel) return;
+  channel.send(`Welcome to the server, ${member}`);
+});
+
+
+client.on('guildMemberAdd', member => {
   let guild = member.guild;
   const embed = new Discord.RichEmbed()
   .setColor(0x00AE86)
