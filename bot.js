@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const config = require("./config.json");
 require('events').EventEmitter.defaultMaxListeners = Infinity;
 
 client.on("ready", () => {
@@ -92,4 +91,4 @@ client.on('message', message => {
 });
 
 // THIS  MUST  BE  THIS  WAY
-client.login(config.token);
+client.login(process.env.BOT_TOKEN);
