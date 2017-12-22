@@ -9,8 +9,8 @@ console.log('I am ready!');
 });
 
 client.on('guildMemberAdd', member => {
-   member.reply("Welcome to the server!");
-});
+   guild.defaultChannel.sendMessage(`"${member.user.username}" joined the server`);
+})
 
 client.on('message', message => {
   if (message.content === '!getavatar') {
