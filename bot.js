@@ -10,8 +10,11 @@ client.on("ready", () => {
     client.user.setPresence({game: {name: "!commands for help", type: 0}});
 });
 
-client.on("ready", () => {
-    member.guild.defaultChannel.send(`Welcome to the server, ${client.user.tag}!`;
+// Create an event listener for new guild members
+client.on('guildMemberAdd', member => {
+  // Send the message to the guilds default channel (usually #general), mentioning the member
+  member.guild.defaultChannel.send(`Welcome to the server, ${member}!`);
+});
                                      
 client.on('message', message => {
   if (message.content === '!getavatar') {
