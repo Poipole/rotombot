@@ -14,11 +14,6 @@ client.on('message', message => {
   }
 });
 
-client.on("guildMemberAdd", (member) => {
-  console.log(`New User "${member.user.username}" has joined "${member.guild.name}"` );
-  member.guild.channels.get("welcome").reply(`"${member.user.username}" has joined this server`);
-});
-
 //offical features ^
 client.on('message', message => {
     if (message.content === '!rotom') {
