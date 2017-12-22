@@ -8,9 +8,9 @@ client.on("ready", () => {
 console.log('I am ready!');
 });
 
-client.on('guildMemberAdd', member => {
-   guild.defaultChannel.sendMessage(`"${member.user.username}" joined the server`);
-})
+client.on("ready", () => {
+    client.user.setPresence({game: {name: "with my code", type: 0}});
+});
 
 client.on('message', message => {
   if (message.content === '!getavatar') {
