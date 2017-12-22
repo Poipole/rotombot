@@ -4,13 +4,12 @@ const config = require("./config.json");
 const token = 'Mzg3MzU4NjAyMzQxNTE1MjY0.DR39yQ.XEOna6oFsMLbGkiMqrDfaq5CeDE';
 
 client.on("ready", () => {
-  // This event will run if the bot starts, and logs in, successfully.
 console.log('I am ready!');
 });
 
 client.on('guildMemberAdd', member => {
   // Send the message to the guilds default channel (usually #general), mentioning the member
-  member.guild.defaultChannel.send(`Welcome to the server, ${member}!`);
+  member.guild.defaultChannel.mention(`Welcome to the server, ${member}!`);
 
   // If you want to send the message to a designated channel on a server instead
   // you can do the following:
