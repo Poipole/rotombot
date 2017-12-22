@@ -10,12 +10,9 @@ client.on("ready", () => {
     client.user.setPresence({game: {name: "!commands for help", type: 0}});
 });
 
-// Create an event listener for new guild members
 client.on('guildMemberAdd', member => {
 const channel = member.guild.channels.find('name', 'general');
-  // Do nothing if the channel wasn't found on this server
   if (!channel) return;
-  // Send the message, mentioning the member
   channel.send(`Howdy! Welcome to Ilex Outpost, ${member}!`);
 });
                                      
