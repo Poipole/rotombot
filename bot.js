@@ -10,6 +10,9 @@ client.on("ready", () => {
     client.user.setPresence({game: {name: "!commands for help", type: 0}});
 });
 
+client.on("ready", () => {
+    member.guild.defaultChannel.send(`Welcome to the server, ${client.user.tag}!`;
+                                     
 client.on('message', message => {
   if (message.content === '!getavatar') {
     // Send the user's avatar URL
