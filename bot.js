@@ -8,7 +8,7 @@ console.log('I am ready!');
 });
 
 client.on("ready", () => {
-    client.user.setPresence({game: {name: "with my code", type: 0}});
+    client.user.setPresence({game: {name: "!commands for help", type: 0}});
 });
 
 client.on('message', message => {
