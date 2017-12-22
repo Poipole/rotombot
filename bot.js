@@ -12,7 +12,7 @@ client.on("ready", () => {
 
 // Create an event listener for new guild members
 client.on('guildMemberAdd', member => {
-const channel = member.guild.channels.find('channelid', '387360187532443668');
+const channel = member.guild.channels.find('name', 'general');
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
