@@ -8,7 +8,7 @@ client.on("ready", () => {
 console.log('I am ready!');
 });
 
-bot.on('guildMemberAdd', member => {
+client.on('guildMemberAdd', member => {
    member.reply("Welcome to the server!");
 });
 
