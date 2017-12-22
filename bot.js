@@ -15,6 +15,12 @@ const channel = member.guild.channels.find('name', 'general');
   if (!channel) return;
   channel.send(`Howdy! Welcome to Ilex Outpost, ${member}!`);
 });
+
+client.on('guildMemberRemove', member => {
+const channel = member.guild.channels.find('name', 'general');
+  if (!channel) return;
+  channel.send(`${member} has left the server! Farewell!`);
+});
                                      
 client.on('message', message => {
   if (message.content === '!getavatar') {
