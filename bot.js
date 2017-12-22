@@ -8,7 +8,7 @@ console.log('I am ready!');
 });
 
 client.on('message', message => {
-  if (message.content === '!avatar') {
+  if (message.content === '!getavatar') {
     // Send the user's avatar URL
     message.reply(message.author.avatarURL);
   }
