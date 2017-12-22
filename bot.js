@@ -8,6 +8,16 @@ client.on("ready", () => {
 console.log('I am ready!');
 });
 
+client.on('guildMemberAdd', member => {
+  let guild = member.guild;
+  const embed = new Discord.RichEmbed()
+  .setColor(0x00AE86)
+  .setTimestamp()
+  .addField('User Update',
+    `${member.user} has joined! :white_check_mark: `)
+  guild.defaultChannel.sendEmbed(embed);
+});
+
 client.on("ready", () => {
     client.user.setPresence({game: {name: "with my code", type: 0}});
 });
