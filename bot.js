@@ -95,7 +95,7 @@ client.on('message', message => {
 //Test Features! ^^^
 client.on('message', message => {
     if (message.content === '!commands') {
-    	message.author.send('Hello\n``` -!rotom\n- !pineapple\n- !fusions\n- !soap\n- !soapy\n- !thegays\n- !fufu\n- !disgusting\n- !gaypowerlevel\n- !io\n- !getavatar```');
+    	message.author.send("Hello! \n``` - !rotom\n- !pineapple\n- !fusions\n- !soap\n- !soapy\n- !thegays\n- !fufu\n- !disgusting\n- !gaypowerlevel\n- !io\n- !getavatar```");
   	}
 });
 
