@@ -1,29 +1,10 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require("./config.json");
-const token = 'Mzg3MzU4NjAyMzQxNTE1MjY0.DR39yQ.XEOna6oFsMLbGkiMqrDfaq5CeDE';
 require('events').EventEmitter.defaultMaxListeners = Infinity;
 
 client.on("ready", () => {
 console.log('I am ready!');
-});
-
-client.on('guildMemberAdd', member => {
-  member.guild.send(`Welcome to the server, ${member}!`);
-  const channel = member.guild.channels.find('name', 'member-log');
-  if (!channel) return;
-  channel.send(`Welcome to the server, ${member}`);
-});
-
-
-client.on('guildMemberAdd', member => {
-  let guild = member.guild;
-  const embed = new Discord.RichEmbed()
-  .setColor(0x00AE86)
-  .setTimestamp()
-  .addField('User Update',
-    `${member.user} has joined! :white_check_mark: `)
-  guild.defaultChannel.sendEmbed(embed);
 });
 
 client.on("ready", () => {
