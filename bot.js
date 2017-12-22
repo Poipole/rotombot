@@ -5,12 +5,22 @@ const token = 'Mzg3MzU4NjAyMzQxNTE1MjY0.DR39yQ.XEOna6oFsMLbGkiMqrDfaq5CeDE';
 
 client.on("ready", () => {
   // This event will run if the bot starts, and logs in, successfully.
-  console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`); 
-  // Example of changing the bot's playing game to something useful. `client.user` is what the
-  // docs refer to as the "ClientUser".
-  client.user.setGame(`on ${client.guilds.size} servers`);
+console.log('I am ready!');
 });
 
+client.on('guildMemberAdd', member => {
+  // Send the message to the guilds default channel (usually #general), mentioning the member
+  member.guild.defaultChannel.send(`Welcome to the server, ${member}!`);
+
+  // If you want to send the message to a designated channel on a server instead
+  // you can do the following:
+  const channel = member.guild.channels.find('name', 'member-log');
+  // Do nothing if the channel wasn't found on this server
+  if (!channel) return;
+  // Send the message, mentioning the member
+  channel.send(`Welcome to the server, ${member}`);
+});
+//offical features ^
 client.on('message', message => {
     if (message.content === '!rotom') {
     	message.channel.send('Rotom is an open source Discord bot made by **Radiating#9066**! It is still in early development, so feel free to send him a message if you have any recommendations/feedback. Github page: https://github.com/Poipole/rotombot');
@@ -83,17 +93,5 @@ client.on('message', message => {
   	}
 });
 
-client.on('guildMemberAdd', member => {
-  // Send the message to the guilds default channel (usually #general), mentioning the member
-  member.guild.defaultChannel.send(`Welcome to the server, ${member}!`);
-
-  // If you want to send the message to a designated channel on a server instead
-  // you can do the following:
-  const channel = member.guild.channels.find('name', 'member-log');
-  // Do nothing if the channel wasn't found on this server
-  if (!channel) return;
-  // Send the message, mentioning the member
-  channel.send(`Welcome to the server, ${member}`);
-});
 // THIS  MUST  BE  THIS  WAY
 client.login(config.token);
