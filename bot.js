@@ -7,6 +7,12 @@ client.on("ready", () => {
 console.log('I am ready!');
 });
 
+client.on('message', message => {
+  if (message.content === '!avatar') {
+    // Send the user's avatar URL
+    message.reply(message.author.avatarURL);
+  }
+});
 //offical features ^
 client.on('message', message => {
     if (message.content === '!rotom') {
