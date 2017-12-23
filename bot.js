@@ -13,7 +13,7 @@ client.on("ready", () => {
 client.on('guildMemberAdd', member => {
 const channel = member.guild.channels.find('name', 'general');
   if (!channel) return;
-  channel.send(`Howdy! Welcome to Ilex Outpost, ${member}!`);
+  channel.send(`Hey there, ${member}! Welcome to Ilex Outpost!`);
 });
 
 client.on('guildMemberRemove', member => {
