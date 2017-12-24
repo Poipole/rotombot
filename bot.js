@@ -7,7 +7,7 @@ console.log('I am ready!');
 });
 
 client.on("ready", () => {
-    client.user.setPresence({game: {name: "!commands for help", type: 0}});
+    client.user.setPresence({game: {name: "Merry Christmas!", type: 0}});
 });
 
 client.on('guildMemberAdd', member => {
