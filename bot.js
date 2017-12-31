@@ -101,12 +101,5 @@ client.on('message', message => {
     	message.author.send("Hello! I'm Rotom, a discord bot created by **Radiating#9066** using **Discord.js**! Here's the list of available commands!\n```- !rotom\n- !pineapple\n- !fusions\n- !soap\n- !soapy\n- !thegays\n- !fufu\n- !disgusting\n- !gaypowerlevel\n- !io\n- !getavatar```");
   	}
 });
-
-client.on('message', message => {
-    if (message.content === '!report') {
-        message.channels.get(387658024535326740).send('Someone sent a report!');
-  	}
-});
-
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
