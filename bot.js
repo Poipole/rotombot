@@ -95,10 +95,16 @@ client.on('message', message => {
     	message.channel.send('https://cdn.discordapp.com/attachments/387669625753567232/393212366378237952/io.png');
   	}
 });
-//Test Features! ^^^
+
 client.on('message', message => {
     if (message.content === '!commands') {
     	message.author.send("Hello! I'm Rotom, a discord bot created by **Radiating#9066** using **Discord.js**! Here's the list of available commands!\n```- !rotom\n- !pineapple\n- !fusions\n- !soap\n- !soapy\n- !thegays\n- !fufu\n- !disgusting\n- !gaypowerlevel\n- !io\n- !getavatar```");
+  	}
+});
+
+client.on('message', message => {
+    if (message.content === '!report') {
+    client.channels.get(387658024535326740).send('Someone sent a report!');
   	}
 });
 
