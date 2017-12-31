@@ -104,7 +104,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === '!report') {
-    client.channels.get(387658024535326740).send('Someone sent a report!');
+        message.channels.get(387658024535326740).send('Someone sent a report!');
   	}
 });
 
