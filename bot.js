@@ -101,5 +101,29 @@ client.on('message', message => {
     	message.author.send("Hello! I'm Rotom, a discord bot created by **Radiating#9066** using **Discord.js**! Here's the list of available commands!\n```- !rotom\n- !pineapple\n- !fusions\n- !soap\n- !soapy\n- !thegays\n- !fufu\n- !disgusting\n- !gaypowerlevel\n- !io\n- !getavatar```");
   	}
 });
+
+//test
+client.on('message', message => {
+        if (message.content === '!kick') {
+            if(!message.member.roles.some(r=>["Administrator", "Moderator"].includes(r.name)) )
+      return message.reply("Sorry, you don't have permissions to use this!");
+    
+    let member = message.mentions.members.first();
+    if(!member)
+      return message.reply("Please mention a valid member of this server");
+    if(!member.kickable) 
+      return message.reply("I cannot kick this user! Do they have a higher role? Do I have kick permissions?");
+    
+    let reason = args.slice(1).join(' ');
+    if(!reason)
+      return message.reply("Please indicate a reason for the kick!");
+    
+    await member.kick(reason)
+      .catch(error => message.reply(`Sorry ${message.author} I couldn't kick because of : ${error}`));
+    message.reply(`${member.user.tag} has been kicked by ${message.author.tag} because: ${reason}`);
+
+  }
+
+
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
