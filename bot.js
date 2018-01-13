@@ -32,6 +32,8 @@ client.on('message', message => {
 client.on('message', message => {
   if (message.content === '!testreport') {
   client.channels.get(401399716773888010).send('Someone has sent a report!');
+  }
+});
     
 //offical features ^
 client.on('message', message => {
