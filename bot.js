@@ -31,10 +31,7 @@ client.on('message', message => {
 
 client.on('message', message => {
   if (message.content === '!testreport') {
-const channel = member.guild.channels.find('name', 'mod-log');
-  if (!channel) return;
-  channel.send(`Someone has sent a report!`);
-});
+  client.channels.get(401399716773888010).send('Someone has sent a report!');
     
 //offical features ^
 client.on('message', message => {
