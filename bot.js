@@ -73,8 +73,8 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    if (message.content === '!fufu') {
-    	message.channel.send('https://i.imgur.com/RXMDIv1.gif');
+    if (message.content === '!nubs') {
+    	message.channel.send('https://cdn.discordapp.com/attachments/362733111194419200/407928284245000192/road.gif');
   	}
 });
 
